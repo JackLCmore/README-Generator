@@ -51,15 +51,15 @@ const questions = [
 function writeToFile(fileName, data) {
 //* use FS module to write data and fileName to readme file
     fs.writeFile(fileName,data,(err)=>
-        err ? console.error(err) : 
-        generateMarkdown.generateMarkdown(data)
-    );
+        err ? console.error(err) : console.log(fileName,data));
+    //     generateMarkdown.generateMarkdown(data)
+    
 }
 // TODO: Create a function to initialize app
 function init() {
     
     inquirer.prompt(questions).then((response)=>{
-        writeToFile("README.md",response);
+        writeToFile("README.md",generateMarkdown(response));
         // console.log(response);
     //     console.log(response.title);
     //     console.log(response.table);
