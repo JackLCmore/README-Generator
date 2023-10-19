@@ -12,7 +12,7 @@ const questions = [
     {
         type:"confirm",
         message:"Do you want to include a table of contents?",
-        name:"TOC",
+        name:"table",
     },
     {
         type:"input",
@@ -50,12 +50,25 @@ const questions = [
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
 //* use FS module to write data and fileName to readme file
-
+    fs.writeFile(fileName,data,(err)=>
+        err ? console.error(err) : 
+        generateMarkdown.generateMarkdown(data)
+    );
 }
 // TODO: Create a function to initialize app
 function init() {
+    
     inquirer.prompt(questions).then((response)=>{
-        console.log(response);
+        writeToFile("README.md",response);
+        // console.log(response);
+    //     console.log(response.title);
+    //     console.log(response.table);
+    //     console.log(response.description);
+    //     console.log(response.installation);
+    //     console.log(response.usage);
+    //     console.log(response.contributing);
+    //     console.log(response.tests);
+    //     console.log(response.questions);
     })
 }
 // Function call to initialize app

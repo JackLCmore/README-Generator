@@ -14,12 +14,29 @@ function renderLicenseSection(license) {
   //* call renderlicenseBadge and renderlicenseLink
   //* use template literal to format license section and call functions
   //* return template literal
+  renderLicenseBadge();
+  renderLicenseLink();
+  return `#`
 }
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   //* create layout of what you markdown readme with template literals
   //* hint - call renderlicense functions inside this function
   return `# ${data.title}
+
+  ## ${data.table}
+  
+  ## ${data.description}
+  
+  ## ${data.installation}
+  
+  ## ${data.usage}
+  
+  ## ${data.contributing}
+  
+  ## ${data.tests}
+  
+  ## ${data.questions}
 `;
 }
 module.exports = generateMarkdown;
