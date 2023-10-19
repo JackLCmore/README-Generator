@@ -3,15 +3,61 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const generateMarkdown = require("./utils/generateMarkdown")
 // TODO: Create an array of questions for user input
-const questions = [];
+const questions = [
+    {
+        type:"input",
+        message:"What is the title of your README?",
+        name:"title",
+    },
+    {
+        type:"confirm",
+        message:"Do you want to include a table of contents?",
+        name:"TOC",
+    },
+    {
+        type:"input",
+        message:"Provide a description of your application",
+        name:"description",
+    },
+    {
+        type:"input",
+        message:"Provide all information regarding installing your application",
+        name:"installation",
+    },
+    {
+        type:"input",
+        message:"Provide all information regarding usage of your application",
+        name:"usage",
+    },
+    {
+        type:"input",
+        message:"Provide all contributers and collaborators for your application",
+        name:"contributing",
+    },
+    {
+        type:"input",
+        message:"Provide information regarding testing the use of your application",
+        name:"tests",
+    },
+    {
+        type:"input",
+        message:"Provide relevant contact info(GitHub, Email, LinkedIn)",
+        name:"questions",
+    },
+];
 //* add type, name, and message for each question
 //* add questions:  added readme sections (description, usage, license, etc)
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
 //* use FS module to write data and fileName to readme file
+
 }
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions).then((response)=>{
+        console.log(response);
+    })
+}
 // Function call to initialize app
 init();
 //* use inquiter to display questios to user
