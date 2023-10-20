@@ -22,11 +22,13 @@
   This application takes a series of user inputs and uses those inputs to print you a pre-formatted README.md file tailored to any application or project!
     
   ## Installation
-    
+  [Check Out A Video Installation Guide Here](https://youtu.be/0oNSuPMxyDc)
+
   Click the Fork button at the top of the GitHub repository and clone down to your device through an SSH link. Run the application by opening it and either in your command line interface or in an integrated terminal type in 'node index.js' and then answer the questions!
     
   ## Usage
-    
+  [Check Out A Video Usage Guide Here](https://youtu.be/r75OdXQXFMg)  
+  
   Using the application is simple, answer the questions given to you in your terminal and let it do the rest of the work! After your README has been generated just copy and paste it into whichever repository it needs to go in!
     
   ## Contributers
