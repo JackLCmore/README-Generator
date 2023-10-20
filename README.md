@@ -90,11 +90,11 @@ ${renderLicenseLink(license)}
   function init() {
     
     inquirer.prompt(questions).then((response)=>{
-        writeToFile("README.md",generateMarkdown(response));
+        writeToFile("./destination/README.md",generateMarkdown(response));
     })
 }
   ```
-  In this final code snippet you can see we are now taking our 'questions' and using the response given back from the user and writing it to a new README.md file that will inevitably take the place of this one!
+  In this final code snippet you can see we are now taking our 'questions' and using the response given back from the user and writing it to a new README.md file and place it in the destination folder for easy recovery!
 
   And if you were wondering, yes, I did make this markdown file with the generator itself, pretty cool stuff right?
   ## Questions
