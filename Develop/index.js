@@ -48,7 +48,7 @@ const questions = [
         type:"list",
         message:"Which License are you using?",
         name:"license",
-        choices:["license1","license2","license3","license4"]
+        choices:["GNU GPL v3","ODbl","MIT License","IBM CPL"]
     }
 ];
 //* add type, name, and message for each question
