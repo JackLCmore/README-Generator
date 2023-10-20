@@ -44,6 +44,12 @@ const questions = [
         message:"Provide relevant contact info(GitHub, Email, LinkedIn)",
         name:"questions",
     },
+    {
+        type:"list",
+        message:"Which License are you using?",
+        name:"license",
+        choices:["license1","license2","license3","license4"]
+    }
 ];
 //* add type, name, and message for each question
 //* add questions:  added readme sections (description, usage, license, etc)
