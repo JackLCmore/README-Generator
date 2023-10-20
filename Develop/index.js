@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
-const generateMarkdown = require("./utils/generateMarkdown")
+const generateMarkdown = require("./utils/generateMarkdown");
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -66,15 +66,6 @@ function init() {
     
     inquirer.prompt(questions).then((response)=>{
         writeToFile("README.md",generateMarkdown(response));
-        // console.log(response);
-    //     console.log(response.title);
-    //     console.log(response.table);
-    //     console.log(response.description);
-    //     console.log(response.installation);
-    //     console.log(response.usage);
-    //     console.log(response.contributing);
-    //     console.log(response.tests);
-    //     console.log(response.questions);
     })
 }
 // Function call to initialize app
