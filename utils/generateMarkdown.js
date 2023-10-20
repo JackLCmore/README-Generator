@@ -140,14 +140,13 @@ ${renderLicenseLink(license)}
 function renderTOC(data){
   if(data.table === true){
     return`## Table of Contents
-  
+  * [License](#license)
   * [Description](#description)
   * [Installation](#installation)
   * [Usage](#usage)
   * [Contributers](#contributers)
   * [Tests](#tests)
   * [Questions](#questions)
-  * [License](license)
   `}
   else{
     return``;
@@ -160,6 +159,10 @@ function generateMarkdown(data) {
   return` # ${data.title}
 
   ${renderTOC(data)}
+
+  ## License
+    
+  ${renderLicenseSection(data)}
     
   ## Description
     
@@ -184,10 +187,6 @@ function generateMarkdown(data) {
   ## Questions
     
   ${data.questions}
-    
-  ## License
-    
-  ${renderLicenseSection(data)}
 `;
 }
 module.exports = generateMarkdown;
